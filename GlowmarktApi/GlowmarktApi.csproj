@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Settings -->
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>8.0</LangVersion>
+    <Configuration Condition=" $(Configuration) == '' ">Release</Configuration>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>GlowmarktApi.snk</AssemblyOriginatorKeyFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <BaseOutputPath>../bin</BaseOutputPath>
+    <PackageOutputPath>../packages</PackageOutputPath>
+    <!-- Assembly / Package Metadata -->
+    <AssemblyConfiguration>$(Configuration)</AssemblyConfiguration>
+    <RootNamespace>GlowmarktApi</RootNamespace>
+    <AssemblyName>GlowmarktApi</AssemblyName>
+    <PackageId>GlowmarktApi</PackageId>
+    <Product>GlowmarktApi</Product>
+    <Copyright>Copyright (c) 2021 AeroXuk</Copyright>
+    <Authors>AeroXuk</Authors>
+    <!-- License / Package / Repo Info -->
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/AeroXuk/GlowmarktApi.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/AeroXuk/GlowmarktApi.Net</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <!-- Version Info -->
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <InformationalVersion>0.1.0.0</InformationalVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+    <Version>0.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
