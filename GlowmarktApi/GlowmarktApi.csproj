@@ -12,7 +12,7 @@
     <PackageOutputPath>../packages</PackageOutputPath>
     <!-- Assembly / Package Metadata -->
     <AssemblyConfiguration>$(Configuration)</AssemblyConfiguration>
-    <RootNamespace>GlowmarktApi</RootNamespace>
+    <RootNamespace>Glowmarkt</RootNamespace>
     <AssemblyName>GlowmarktApi</AssemblyName>
     <PackageId>GlowmarktApi</PackageId>
     <Product>GlowmarktApi</Product>
