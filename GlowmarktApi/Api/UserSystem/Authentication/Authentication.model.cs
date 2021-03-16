@@ -1,15 +1,15 @@
-﻿using Glowmarkt.Model;
+﻿using Glowmarkt.Model.UserSystem.Authentication;
 
 namespace Glowmarkt.Api
 {
 	public partial class UserSystemAuthentication
 	{
 		/// <summary>Authenticate an account</summary>
-		public UserSystemAuthenticationPostAuthenticationResponse PostAuthentication(string username, string password)
-			=> PostAuthentication(new UserSystemAuthenticationPostAuthenticationRequest(username, password));
+		public AuthenticationPostAuthenticationResponse PostAuthentication(string username, string password)
+			=> PostAuthentication(new AuthenticationPostAuthenticationRequest(username, password));
 
 		/// <summary>Authenticate an account</summary>
-		public UserSystemAuthenticationPostAuthenticationResponse PostAuthentication(UserSystemAuthenticationPostAuthenticationRequest request)
+		public AuthenticationPostAuthenticationResponse PostAuthentication(AuthenticationPostAuthenticationRequest request)
 		{
 			var reply = PostAuthenticationAsync(request);
 			reply.Wait();

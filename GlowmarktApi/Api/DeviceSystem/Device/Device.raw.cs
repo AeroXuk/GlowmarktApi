@@ -13,7 +13,7 @@ namespace Glowmarkt.Api
 		}
 
 		/// <summary>Find Device by ID</summary>
-		public string GetDeviceRaw(string id)
+		public string GetDeviceRaw(Guid id)
 		{
 			var reply = GetDeviceRawAsync(id);
 			reply.Wait();
@@ -21,7 +21,7 @@ namespace Glowmarkt.Api
 		}
 
 		/// <summary>This call can be used to see whether a gateway device is sending packets to the Glow Platform (i.e. via WiFi).</summary>
-		public string GetDeviceStatusRaw(string id)
+		public string GetDeviceStatusRaw(Guid id)
 		{
 			var reply = GetDeviceStatusRawAsync(id);
 			reply.Wait();

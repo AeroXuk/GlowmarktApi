@@ -15,7 +15,7 @@ namespace Glowmarkt.Api
 		}
 
 		/// <summary>Find Device by ID</summary>
-		public async Task<string> GetDeviceRawAsync(string id)
+		public async Task<string> GetDeviceRawAsync(Guid id)
 		{
 			HttpResponseMessage response = await Client.HttpClient.GetAsync($"device/{id}");
 			response.EnsureSuccessStatusCode();
@@ -23,7 +23,7 @@ namespace Glowmarkt.Api
 		}
 
 		/// <summary>This call can be used to see whether a gateway device is sending packets to the Glow Platform (i.e. via WiFi).</summary>
-		public async Task<string> GetDeviceStatusRawAsync(string id)
+		public async Task<string> GetDeviceStatusRawAsync(Guid id)
 		{
 			HttpResponseMessage response = await Client.HttpClient.GetAsync($"device/{id}/status");
 			response.EnsureSuccessStatusCode();

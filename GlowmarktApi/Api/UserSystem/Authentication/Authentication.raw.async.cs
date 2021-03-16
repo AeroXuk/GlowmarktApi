@@ -1,4 +1,4 @@
-﻿using Glowmarkt.Model;
+﻿using Glowmarkt.Model.UserSystem.Authentication;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -9,10 +9,10 @@ namespace Glowmarkt.Api
 	{
 		/// <summary>Authenticate an account</summary>
 		public async Task<string> PostAuthenticationRawAsync(string username, string password)
-			=> await PostAuthenticationRawAsync(new UserSystemAuthenticationPostAuthenticationRequest(username, password));
+			=> await PostAuthenticationRawAsync(new AuthenticationPostAuthenticationRequest(username, password));
 
 		/// <summary>Authenticate an account</summary>
-		public async Task<string> PostAuthenticationRawAsync(UserSystemAuthenticationPostAuthenticationRequest request)
+		public async Task<string> PostAuthenticationRawAsync(AuthenticationPostAuthenticationRequest request)
 		{
 			HttpResponseMessage response = await Client.HttpClient.TruePostAsJsonAsync("auth", request);
 			response.EnsureSuccessStatusCode();
@@ -21,7 +21,7 @@ namespace Glowmarkt.Api
 
 		private string SaveToken(string response)
 		{
-			_ = SaveToken(JsonConvert.DeserializeObject<UserSystemAuthenticationPostAuthenticationResponse>(response));
+			_ = SaveToken(JsonConvert.DeserializeObject<AuthenticationPostAuthenticationResponse>(response));
 			return response;
 		}
 	}

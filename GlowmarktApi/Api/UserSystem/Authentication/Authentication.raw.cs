@@ -1,4 +1,4 @@
-﻿using Glowmarkt.Model;
+﻿using Glowmarkt.Model.UserSystem.Authentication;
 
 namespace Glowmarkt.Api
 {
@@ -6,10 +6,10 @@ namespace Glowmarkt.Api
 	{
 		/// <summary>Authenticate an account</summary>
 		public string PostAuthenticationRaw(string username, string password)
-			=> PostAuthenticationRaw(new UserSystemAuthenticationPostAuthenticationRequest(username, password));
+			=> PostAuthenticationRaw(new AuthenticationPostAuthenticationRequest(username, password));
 
 		/// <summary>Authenticate an account</summary>
-		public string PostAuthenticationRaw(UserSystemAuthenticationPostAuthenticationRequest request)
+		public string PostAuthenticationRaw(AuthenticationPostAuthenticationRequest request)
 		{
 			var reply = PostAuthenticationRawAsync(request);
 			reply.Wait();
