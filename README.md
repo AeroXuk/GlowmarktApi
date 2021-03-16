@@ -2,7 +2,10 @@
 
 
 
-## Endpoint Documentation
+## Where to register an account for the Glowmarkt Api
+https://glowmarkt.com/register.html
+
+## Glowmarkt Api Endpoint Documentation
 
 - [Glowmarkt User System](https://api.glowmarkt.com/api-docs/v0-1/usersys/usertypes/#/)
   - User

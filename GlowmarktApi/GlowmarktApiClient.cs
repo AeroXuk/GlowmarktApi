@@ -71,12 +71,15 @@ namespace Glowmarkt
 			}
 		}
 
+		public DeviceSystem DeviceSystem { get; }
+
 		public ResourceSystem ResourceSystem { get; }
 
 		public UserSystem UserSystem { get; }
 
 		public GlowmarktApiClient()
 		{
+			DeviceSystem = new DeviceSystem(this);
 			ResourceSystem = new ResourceSystem(this);
 			UserSystem = new UserSystem(this);
 		}
