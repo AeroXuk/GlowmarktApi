@@ -1,10 +1,10 @@
 ﻿namespace Glowmarkt.Api
 {
-	public class ISystem
+	public class SystemBase
 	{
 		internal GlowmarktApiClient Client { get; }
 
-		internal ISystem(GlowmarktApiClient client)
+		internal SystemBase(GlowmarktApiClient client)
 		{
 			Client = client;
 		}

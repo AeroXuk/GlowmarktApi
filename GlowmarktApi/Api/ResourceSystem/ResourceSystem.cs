@@ -1,6 +1,6 @@
 ﻿namespace Glowmarkt.Api
 {
-	public partial class ResourceSystem : ISystem
+	public partial class ResourceSystem : SystemBase
 	{
 		public ResourceSystemResource Resource { get; }
 

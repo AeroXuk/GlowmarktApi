@@ -1,6 +1,6 @@
 ﻿namespace Glowmarkt.Api
 {
-	public partial class DeviceSystem : ISystem
+	public partial class DeviceSystem : SystemBase
 	{
 		public DeviceSystemDevice Device { get; }
 

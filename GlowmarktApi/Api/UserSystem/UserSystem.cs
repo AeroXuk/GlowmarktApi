@@ -1,6 +1,6 @@
 ﻿namespace Glowmarkt.Api
 {
-	public partial class UserSystem : ISystem
+	public partial class UserSystem : SystemBase
 	{
 		public UserSystemAuthentication Authentication { get; }
 
